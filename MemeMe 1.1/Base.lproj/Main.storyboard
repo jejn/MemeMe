@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem systemItem="action" id="eyh-UH-ibh">
+                                    <barButtonItem enabled="NO" systemItem="action" id="eyh-UH-ibh">
                                         <connections>
                                             <action selector="shareMeme:" destination="BYZ-38-t0r" id="8U5-Au-t9W"/>
                                         </connections>
@@ -62,19 +62,19 @@
                                     </mask>
                                 </variation>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVJ-Ou-nt6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVJ-Ou-nt6">
                                 <rect key="frame" x="-4" y="64" width="383" height="559"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3C-Kk-jSC" userLabel="Top Text Field">
-                                <rect key="frame" x="152" y="97" width="71" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP TEXT" textAlignment="center" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="r3C-Kk-jSC" userLabel="Top Text Field">
+                                <rect key="frame" x="16" y="97" width="343" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5t-p7-rVw" userLabel="Bottom Text Field">
-                                <rect key="frame" x="136.5" y="573" width="102" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM TEXT" textAlignment="center" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="j5t-p7-rVw" userLabel="Bottom Text Field">
+                                <rect key="frame" x="16" y="573" width="343" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -83,14 +83,18 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r3C-Kk-jSC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3lc-U0-dfI"/>
                             <constraint firstItem="gVJ-Ou-nt6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4Wb-hs-B8F"/>
+                            <constraint firstItem="r3C-Kk-jSC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7DT-EX-2lb"/>
                             <constraint firstAttribute="trailing" secondItem="ISr-1q-P2T" secondAttribute="trailing" id="BIA-v4-qmG"/>
+                            <constraint firstItem="j5t-p7-rVw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BO3-Iu-hth"/>
                             <constraint firstItem="gVJ-Ou-nt6" firstAttribute="top" secondItem="r3C-Kk-jSC" secondAttribute="bottom" constant="-50" id="Dca-s8-8wr"/>
                             <constraint firstItem="ISr-1q-P2T" firstAttribute="top" secondItem="gVJ-Ou-nt6" secondAttribute="bottom" id="Gab-pl-4Bx"/>
                             <constraint firstItem="ISr-1q-P2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lcb-Xn-Qes"/>
                             <constraint firstItem="ISr-1q-P2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MRi-Wh-xaj"/>
                             <constraint firstItem="gVJ-Ou-nt6" firstAttribute="top" secondItem="qsw-cX-hIa" secondAttribute="bottom" id="MgX-eH-UW5"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nkc-Zl-BfS"/>
+                            <constraint firstItem="j5t-p7-rVw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TEq-Uo-540"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ISr-1q-P2T" secondAttribute="bottom" id="TUi-vd-FZX"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aMv-vl-6t7"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ah7-s5-zY4"/>
@@ -104,9 +108,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomTextField" destination="j5t-p7-rVw" id="PJv-ya-Usf"/>
+                        <outlet property="bottomToolbar" destination="ISr-1q-P2T" id="yWa-z3-X55"/>
                         <outlet property="cameraButton" destination="fSz-Xk-1dp" id="7iO-W2-B7n"/>
                         <outlet property="memeView" destination="gVJ-Ou-nt6" id="DZ2-o8-AHX"/>
+                        <outlet property="shareButton" destination="eyh-UH-ibh" id="QJe-Un-6FS"/>
                         <outlet property="topTextField" destination="r3C-Kk-jSC" id="eNK-ko-ukd"/>
+                        <outlet property="topToolbar" destination="qsw-cX-hIa" id="vlv-fB-tti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
