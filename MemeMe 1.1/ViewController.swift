@@ -16,6 +16,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Global variables
     
     let imagePicker = UIImagePickerController()
+    let topPlaceholder = "TOP"
+    let bottomPlaceholder = "BOTTOM"
     
     let memeTextAttributes: [String: AnyObject] = [
         NSStrokeColorAttributeName: UIColor.blackColor(),
@@ -65,15 +67,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(.Camera)
         
         // Set text fields
-        topTextField.clearsOnBeginEditing = true
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.text = "TOP"
-        topTextField.textAlignment = .Center
         
-        bottomTextField.clearsOnBeginEditing = true
+        topTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.text = topPlaceholder
+        topTextField.textAlignment = .Center
+        textFieldDidBeginEditing(topTextField)
+
+        
         bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.text = "BOTTOM"
+        bottomTextField.text = bottomPlaceholder
         bottomTextField.textAlignment = .Center
+        textFieldDidBeginEditing(bottomTextField)
+
     }
     
     
@@ -86,7 +91,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Methods
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        textField.clearsOnBeginEditing = true
+        if textField.text == topPlaceholder || textField.text == bottomPlaceholder {
+            textField.clearsOnBeginEditing = true
+        } else {
+            textField.clearsOnBeginEditing = false
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -130,7 +139,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Enable shareButton
         shareButton.enabled = true
         
-        // Found good tutorial: ( https://www.youtube.com/watch?v=1EmGRVlifhw )
+        // Found tutorial: ( https://www.youtube.com/watch?v=1EmGRVlifhw )
     }
     
     func alertMessage(title: String, message: String) {
@@ -143,7 +152,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         self.presentViewController(alertMessage, animated: true, completion: nil)
         
-        // Found tutorial: https://www.youtube.com/watch?v=3vMTpBCFljY
+        // Found tutorial: ( https://www.youtube.com/watch?v=3vMTpBCFljY )
     }
     
     func generateMemedImage() -> UIImage {
@@ -163,6 +172,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomToolbar.hidden = false
         
         return memedImage
+    }
+    
+    func save(memedImage: UIImage) {
+        
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: memeView.image!, memedImage: memedImage)
+        
+        // TODO: method unfinished disregards Issue
     }
 
 
@@ -197,6 +213,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func shareMeme(sender: AnyObject) {
+        
+        // Generate a memed image
+        let memedImage = generateMemedImage()
+        
+        // Define an instance of the ActivityViewController
+        let activityView = UIActivityViewController(activityItems: [memedImage], applicationActivities: [])
+        
+        // Present the ActivityViewController
+        presentViewController(activityView, animated: true, completion: nil)
+        
+        activityView.completionWithItemsHandler = { (activity: String?, success: Bool, items: [AnyObject]?, error: NSError?) in
+            if success {
+                self.save(memedImage)
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
     }
 
     @IBAction func cancelAction(sender: AnyObject) {

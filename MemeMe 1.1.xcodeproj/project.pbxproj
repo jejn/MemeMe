@@ -14,6 +14,7 @@
 		A88B23931C088C8500BEAD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A88B23911C088C8500BEAD51 /* LaunchScreen.storyboard */; };
 		A88B239E1C088C8500BEAD51 /* MemeMe_1_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B239D1C088C8500BEAD51 /* MemeMe_1_1Tests.swift */; };
 		A88B23A91C088C8500BEAD51 /* MemeMe_1_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B23A81C088C8500BEAD51 /* MemeMe_1_1UITests.swift */; };
+		A88B23B71C08B07300BEAD51 /* MemeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88B23B61C08B07300BEAD51 /* MemeStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A88B23A41C088C8500BEAD51 /* MemeMe 1.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MemeMe 1.1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A88B23A81C088C8500BEAD51 /* MemeMe_1_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMe_1_1UITests.swift; sourceTree = "<group>"; };
 		A88B23AA1C088C8500BEAD51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88B23B61C08B07300BEAD51 /* MemeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				A88B238F1C088C8500BEAD51 /* Assets.xcassets */,
 				A88B23911C088C8500BEAD51 /* LaunchScreen.storyboard */,
 				A88B23941C088C8500BEAD51 /* Info.plist */,
+				A88B23B61C08B07300BEAD51 /* MemeStruct.swift */,
 			);
 			path = "MemeMe 1.1";
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A88B238B1C088C8500BEAD51 /* ViewController.swift in Sources */,
+				A88B23B71C08B07300BEAD51 /* MemeStruct.swift in Sources */,
 				A88B23891C088C8500BEAD51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
