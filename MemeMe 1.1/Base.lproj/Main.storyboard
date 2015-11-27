@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,13 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-cX-hIa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="eyh-UH-ibh"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="1Mg-7E-fZv"/>
+                                    <barButtonItem systemItem="cancel" id="r39-xD-PS3"/>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISr-1q-P2T">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="d2f-HX-98x"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cVE-Ae-Yiy"/>
+                                    <barButtonItem systemItem="camera" id="fSz-Xk-1dp"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="plb-ob-MEP"/>
+                                    <barButtonItem title="Album" id="wLx-V8-8c0"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Scd-hw-glh"/>
+                                </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="d2f-HX-98x"/>
+                                    </mask>
+                                </variation>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gVJ-Ou-nt6">
+                                <rect key="frame" x="-4" y="64" width="383" height="559"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gVJ-Ou-nt6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4Wb-hs-B8F"/>
+                            <constraint firstAttribute="trailing" secondItem="ISr-1q-P2T" secondAttribute="trailing" id="BIA-v4-qmG"/>
+                            <constraint firstItem="ISr-1q-P2T" firstAttribute="top" secondItem="gVJ-Ou-nt6" secondAttribute="bottom" id="Gab-pl-4Bx"/>
+                            <constraint firstItem="ISr-1q-P2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lcb-Xn-Qes"/>
+                            <constraint firstItem="ISr-1q-P2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MRi-Wh-xaj"/>
+                            <constraint firstItem="gVJ-Ou-nt6" firstAttribute="top" secondItem="qsw-cX-hIa" secondAttribute="bottom" id="MgX-eH-UW5"/>
+                            <constraint firstItem="qsw-cX-hIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nkc-Zl-BfS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ISr-1q-P2T" secondAttribute="bottom" id="TUi-vd-FZX"/>
+                            <constraint firstItem="qsw-cX-hIa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aMv-vl-6t7"/>
+                            <constraint firstItem="qsw-cX-hIa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ah7-s5-zY4"/>
+                            <constraint firstAttribute="trailing" secondItem="qsw-cX-hIa" secondAttribute="trailing" id="ewj-TT-tPF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gVJ-Ou-nt6" secondAttribute="trailing" constant="-20" id="i45-6N-Sp2"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="535.5" y="526.5"/>
         </scene>
     </scenes>
 </document>
