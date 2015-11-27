@@ -71,13 +71,13 @@
                                 <rect key="frame" x="152" y="97" width="71" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM TEXT" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j5t-p7-rVw" userLabel="Bottom Text Field">
                                 <rect key="frame" x="136.5" y="573" width="102" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <animations/>
@@ -103,8 +103,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bottomTextField" destination="j5t-p7-rVw" id="PJv-ya-Usf"/>
                         <outlet property="cameraButton" destination="fSz-Xk-1dp" id="7iO-W2-B7n"/>
                         <outlet property="memeView" destination="gVJ-Ou-nt6" id="DZ2-o8-AHX"/>
+                        <outlet property="topTextField" destination="r3C-Kk-jSC" id="eNK-ko-ukd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
