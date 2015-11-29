@@ -178,7 +178,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: memeView.image!, memedImage: memedImage)
         
-        // TODO: method unfinished disregards Issue
+        meme
     }
 
 
@@ -232,6 +232,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func cancelAction(sender: AnyObject) {
+        
+        // TODO: Add cancel function
     }
 
 

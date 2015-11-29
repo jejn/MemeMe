@@ -72,13 +72,13 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP TEXT" textAlignment="center" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="r3C-Kk-jSC" userLabel="Top Text Field">
-                                <rect key="frame" x="16" y="97" width="343" height="17"/>
+                                <rect key="frame" x="16" y="104" width="343" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM TEXT" textAlignment="center" minimumFontSize="32" translatesAutoresizingMaskIntoConstraints="NO" id="j5t-p7-rVw" userLabel="Bottom Text Field">
-                                <rect key="frame" x="16" y="573" width="343" height="17"/>
+                                <rect key="frame" x="16" y="566" width="343" height="17"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
@@ -92,7 +92,6 @@
                             <constraint firstItem="r3C-Kk-jSC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7DT-EX-2lb"/>
                             <constraint firstAttribute="trailing" secondItem="ISr-1q-P2T" secondAttribute="trailing" id="BIA-v4-qmG"/>
                             <constraint firstItem="j5t-p7-rVw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BO3-Iu-hth"/>
-                            <constraint firstItem="gVJ-Ou-nt6" firstAttribute="top" secondItem="r3C-Kk-jSC" secondAttribute="bottom" constant="-50" id="Dca-s8-8wr"/>
                             <constraint firstItem="ISr-1q-P2T" firstAttribute="top" secondItem="gVJ-Ou-nt6" secondAttribute="bottom" id="Gab-pl-4Bx"/>
                             <constraint firstItem="ISr-1q-P2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lcb-Xn-Qes"/>
                             <constraint firstItem="ISr-1q-P2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MRi-Wh-xaj"/>
@@ -100,13 +99,14 @@
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nkc-Zl-BfS"/>
                             <constraint firstItem="j5t-p7-rVw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TEq-Uo-540"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ISr-1q-P2T" secondAttribute="bottom" id="TUi-vd-FZX"/>
+                            <constraint firstItem="ISr-1q-P2T" firstAttribute="top" secondItem="j5t-p7-rVw" secondAttribute="bottom" constant="40" id="ZTl-9h-BVc"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aMv-vl-6t7"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ah7-s5-zY4"/>
                             <constraint firstItem="r3C-Kk-jSC" firstAttribute="centerX" secondItem="gVJ-Ou-nt6" secondAttribute="centerX" id="cEK-3m-Pkh"/>
                             <constraint firstAttribute="trailing" secondItem="qsw-cX-hIa" secondAttribute="trailing" id="ewj-TT-tPF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gVJ-Ou-nt6" secondAttribute="trailing" constant="-20" id="i45-6N-Sp2"/>
                             <constraint firstItem="j5t-p7-rVw" firstAttribute="centerX" secondItem="gVJ-Ou-nt6" secondAttribute="centerX" id="iQo-cs-SYS"/>
-                            <constraint firstItem="j5t-p7-rVw" firstAttribute="top" secondItem="gVJ-Ou-nt6" secondAttribute="bottom" constant="-50" id="vLf-I6-nb4"/>
+                            <constraint firstItem="r3C-Kk-jSC" firstAttribute="top" secondItem="qsw-cX-hIa" secondAttribute="bottom" constant="40" id="tjV-vo-Jin"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
