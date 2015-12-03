@@ -97,18 +97,33 @@
                             <constraint firstItem="ISr-1q-P2T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MRi-Wh-xaj"/>
                             <constraint firstItem="gVJ-Ou-nt6" firstAttribute="top" secondItem="qsw-cX-hIa" secondAttribute="bottom" id="MgX-eH-UW5"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nkc-Zl-BfS"/>
+                            <constraint firstItem="ISr-1q-P2T" firstAttribute="top" secondItem="j5t-p7-rVw" secondAttribute="bottom" priority="750" constant="40" id="OFz-1i-u7q"/>
                             <constraint firstItem="j5t-p7-rVw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TEq-Uo-540"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ISr-1q-P2T" secondAttribute="bottom" id="TUi-vd-FZX"/>
-                            <constraint firstItem="ISr-1q-P2T" firstAttribute="top" secondItem="j5t-p7-rVw" secondAttribute="bottom" constant="40" id="ZTl-9h-BVc"/>
+                            <constraint firstItem="r3C-Kk-jSC" firstAttribute="top" secondItem="qsw-cX-hIa" secondAttribute="bottom" constant="10" id="WSP-CW-j9e"/>
+                            <constraint firstItem="ISr-1q-P2T" firstAttribute="top" secondItem="j5t-p7-rVw" secondAttribute="bottom" constant="10" id="Y3h-hB-9Lz"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aMv-vl-6t7"/>
                             <constraint firstItem="qsw-cX-hIa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ah7-s5-zY4"/>
                             <constraint firstItem="r3C-Kk-jSC" firstAttribute="centerX" secondItem="gVJ-Ou-nt6" secondAttribute="centerX" id="cEK-3m-Pkh"/>
                             <constraint firstAttribute="trailing" secondItem="qsw-cX-hIa" secondAttribute="trailing" id="ewj-TT-tPF"/>
+                            <constraint firstItem="r3C-Kk-jSC" firstAttribute="top" secondItem="qsw-cX-hIa" secondAttribute="bottom" priority="750" constant="40" id="gQs-Ar-Axb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gVJ-Ou-nt6" secondAttribute="trailing" constant="-20" id="i45-6N-Sp2"/>
                             <constraint firstItem="j5t-p7-rVw" firstAttribute="centerX" secondItem="gVJ-Ou-nt6" secondAttribute="centerX" id="iQo-cs-SYS"/>
-                            <constraint firstItem="r3C-Kk-jSC" firstAttribute="top" secondItem="qsw-cX-hIa" secondAttribute="bottom" constant="40" id="tjV-vo-Jin"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WSP-CW-j9e"/>
+                                <exclude reference="Y3h-hB-9Lz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="WSP-CW-j9e"/>
+                                <include reference="Y3h-hB-9Lz"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomTextField" destination="j5t-p7-rVw" id="PJv-ya-Usf"/>
